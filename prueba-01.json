@@ -1,0 +1,861 @@
+{
+  "meta": {
+    "id": "prueba-01",
+    "title": "Prueba 01 — COLORS + 嘘",
+    "description": "Cobertura: sesiones 01 (COLORS, FLOW) y 02 (嘘, SID). Mitad frases de las canciones (tag origen:letra), mitad frases nuevas con la misma gramática (tag origen:transfer). Compara los dos porcentajes en los resultados. Larga: se puede hacer en dos sentadas, el progreso se guarda.",
+    "lang": "ja-JP",
+    "voice_preference": ["Google 日本語", "Microsoft Nanami", "Microsoft Keita", "Kyoko"],
+    "default_rate": 0.85,
+    "slow_rate": 0.6,
+    "speak_attempts": 3,
+    "dictation_tolerance": 0,
+    "shuffle_sections": false,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "show_explanation": "after_each",
+    "passing_pct": 70
+  },
+  "sections": [
+    {
+      "id": "escucha",
+      "title": "1. Comprensión auditiva",
+      "intro": "Oirás frases de las canciones y frases nuevas. Puedes repetirlas las veces que quieras. Elige el significado.",
+      "questions": [
+        {
+          "id": "e01", "type": "listen_choose", "tags": ["origen:letra", "vocabulario", "N5"], "source": "COLORS L5",
+          "audio": { "text": "いつも" },
+          "prompt": "¿Qué significa?",
+          "options": ["siempre", "ahora", "aquí", "ya"],
+          "answer": 0,
+          "explanation": "いつも = siempre (N5)."
+        },
+        {
+          "id": "e02", "type": "listen_choose", "tags": ["origen:letra", "vocabulario", "ga-nuevo"], "source": "COLORS L23",
+          "audio": { "text": "光が射した" },
+          "prompt": "¿Qué significa lo que oíste?",
+          "options": ["Entró la luz", "Se apagó la luz", "Busqué la luz", "La luz se fue"],
+          "answer": 0,
+          "explanation": "{光|ひかり}が{射|さ}した — が marca información nueva: la luz **aparece**."
+        },
+        {
+          "id": "e03", "type": "listen_choose", "tags": ["origen:letra", "koto"], "source": "COLORS L28",
+          "audio": { "text": "窓を開くことを決めた" },
+          "prompt": "¿Qué significa?",
+          "options": ["Decidí abrir la ventana", "La ventana se abrió", "Quiero abrir la ventana", "Cerré la ventana"],
+          "answer": 0,
+          "explanation": "{開|ひら}く**こと**を{決|き}めた — 〜ことを決める = decidir hacer algo."
+        },
+        {
+          "id": "e04", "type": "listen_choose", "tags": ["origen:letra", "potencial"], "source": "嘘 L52",
+          "audio": { "text": "二人戻れない" },
+          "prompt": "¿Qué significa?",
+          "options": ["Los dos no podemos volver", "Los dos no volvemos", "Los dos volvimos", "Los dos volveremos"],
+          "answer": 0,
+          "explanation": "{戻|もど}**れ**ない = potencial negativo: no **podemos** volver."
+        },
+        {
+          "id": "e05", "type": "listen_choose", "tags": ["origen:letra", "contraccion", "n-da"], "source": "嘘 L38",
+          "audio": { "text": "全部わかってたんだ" },
+          "prompt": "¿Qué significa?",
+          "options": ["Es que ya lo sabía todo", "No entiendo nada", "Lo entendí todo ahora", "¿Lo sabías todo?"],
+          "answer": 0,
+          "explanation": "わかって**た** = わかっていた (estado). **んだ** = のだ, confesión."
+        },
+        {
+          "id": "e06", "type": "listen_choose", "tags": ["origen:letra", "nu", "furi"], "source": "嘘 L21",
+          "audio": { "text": "気づかぬふり" },
+          "prompt": "¿Qué significa?",
+          "options": ["fingir no darse cuenta", "darse cuenta de repente", "no poder darse cuenta", "hacerse el dormido"],
+          "answer": 0,
+          "explanation": "{気|き}づか**ぬ** = 気づかない. **ふり**[をする] = fingir."
+        },
+        {
+          "id": "e07", "type": "listen_choose", "tags": ["origen:letra", "compuestos", "au"], "source": "嘘 L87",
+          "audio": { "text": "手を振り合った" },
+          "prompt": "¿Qué significa?",
+          "options": ["Nos despedimos con la mano el uno al otro", "Yo le hice adiós con la mano", "Ella me hizo adiós con la mano", "Nos dimos la mano"],
+          "answer": 0,
+          "explanation": "{振|ふ}り**合う** — 〜合う = mutuamente."
+        },
+        {
+          "id": "e08", "type": "listen_choose", "tags": ["origen:letra", "koto-wa-nai", "mou"], "source": "嘘 L90",
+          "audio": { "text": "もうあうことはない" },
+          "prompt": "¿Qué significa?",
+          "options": ["Ya no nos volveremos a ver", "Todavía no nos vemos", "Nos veremos pronto", "No hace falta vernos"],
+          "answer": 0,
+          "explanation": "**もう** + negativo = ya no. {逢|あ}う**ことはない** = no ocurrirá."
+        },
+        {
+          "id": "e09", "type": "listen_choose", "tags": ["origen:transfer", "kuru", "N5"], "source": "transfer",
+          "audio": { "text": "友達が来た" },
+          "prompt": "¿Qué significa?",
+          "options": ["Vino un amigo", "Se fue un amigo", "Esperé a un amigo", "Un amigo no vino"],
+          "answer": 0,
+          "explanation": "{友達|ともだち}が{来|き}た — 来る (irregular): くる / きた / こない. が = información nueva."
+        },
+        {
+          "id": "e10", "type": "listen_choose", "tags": ["origen:transfer", "compuestos", "tsuzukeru"], "source": "transfer",
+          "audio": { "text": "本を読み続けた" },
+          "prompt": "¿Qué significa?",
+          "options": ["Seguí leyendo el libro", "Empecé a leer el libro", "Terminé de leer el libro", "Dejé de leer el libro"],
+          "answer": 0,
+          "explanation": "{読|よ}み**続けた** — raíz ます + 続ける = seguir. Mismo patrón que 待ち続けて."
+        },
+        {
+          "id": "e11", "type": "listen_choose", "tags": ["origen:transfer", "vocabulario", "negativo"], "source": "transfer",
+          "audio": { "text": "電話が震えない" },
+          "prompt": "¿Qué significa?",
+          "options": ["El teléfono no vibra", "No tengo teléfono", "El teléfono sonó", "El teléfono se rompió"],
+          "answer": 0,
+          "explanation": "{電話|でんわ}が{震|ふる}えない — 震える = vibrar (el verbo de 震えない知らせ)."
+        },
+        {
+          "id": "e12", "type": "listen_choose", "tags": ["origen:transfer", "te-shimau"], "source": "transfer",
+          "audio": { "text": "全部食べてしまった" },
+          "prompt": "¿Qué significa?",
+          "options": ["Me lo comí todo (por completo)", "No comí nada", "Quiero comerlo todo", "Voy a comer todo"],
+          "answer": 0,
+          "explanation": "{食|た}べて**しまった** — 〜てしまう = hacer por completo (a veces con lamento)."
+        },
+        {
+          "id": "e13", "type": "listen_choose", "tags": ["origen:transfer", "sou-ni-naru"], "source": "transfer",
+          "audio": { "text": "泣きそうになった" },
+          "prompt": "¿Qué significa?",
+          "options": ["Casi lloro (estuve a punto)", "Lloré", "Quiero llorar", "Dicen que lloró"],
+          "answer": 0,
+          "explanation": "{泣|な}き**そうになった** = estar a punto de. Igual que 開きそうになる: casi, y no pasó."
+        },
+        {
+          "id": "e14", "type": "listen_choose", "tags": ["origen:transfer", "nagara"], "source": "transfer",
+          "audio": { "text": "音楽を聞きながら勉強する" },
+          "prompt": "¿Qué significa?",
+          "options": ["Estudio mientras escucho música", "Escucho música después de estudiar", "Estudio música", "Ni estudio ni escucho música"],
+          "answer": 0,
+          "explanation": "{聞|き}き**ながら** = mientras escucho. Mismo ながら de 迷いながら."
+        },
+        {
+          "id": "e15", "type": "listen_choose", "tags": ["origen:transfer", "furi"], "source": "transfer",
+          "audio": { "text": "知らないふりをした" },
+          "prompt": "¿Qué significa?",
+          "options": ["Fingí no saber", "No sabía", "Quería saber", "Me di cuenta"],
+          "answer": 0,
+          "explanation": "{知|し}らない**ふりをした** = hacerse el que no sabe. Aquí el をする aparece completo."
+        },
+        {
+          "id": "e16", "type": "listen_choose", "tags": ["origen:transfer", "hodo"], "source": "transfer",
+          "audio": { "text": "死ぬほど疲れた" },
+          "prompt": "¿Qué significa?",
+          "options": ["Estoy cansado hasta morir", "Me morí de cansancio (literal)", "Estoy un poco cansado", "No estoy cansado"],
+          "answer": 0,
+          "explanation": "{死|し}ぬ**ほど** = hasta el punto de morir. Mismo ほど de 痛いほど."
+        },
+        {
+          "id": "e17", "type": "listen_choose", "tags": ["origen:transfer", "suki-ga", "N5"], "source": "transfer",
+          "audio": { "text": "猫が好きです" },
+          "prompt": "¿Qué significa?",
+          "options": ["Me gustan los gatos", "El gato me quiere", "Tengo un gato", "Busco un gato"],
+          "answer": 0,
+          "explanation": "{猫|ねこ}**が**{好|す}き — 好き pide が: «los gatos son queridos (por mí)»."
+        },
+        {
+          "id": "e18", "type": "listen_choose", "tags": ["origen:transfer", "mou"], "source": "transfer",
+          "audio": { "text": "もう食べない" },
+          "prompt": "¿Qué significa?",
+          "options": ["Ya no como más", "Todavía no como", "Ya comí", "Voy a comer más"],
+          "answer": 0,
+          "explanation": "**もう** + negativo = ya no. Como もう逢うことはない."
+        },
+        {
+          "id": "e19", "type": "listen_choose", "tags": ["origen:transfer", "koto-wa-nai"], "source": "transfer",
+          "audio": { "text": "心配することはない" },
+          "prompt": "¿Qué significa?",
+          "options": ["No hace falta preocuparse", "Nunca me preocupo", "Me preocupa mucho", "No sé si preocuparme"],
+          "answer": 0,
+          "explanation": "〜**ことはない** — segundo uso: «no hace falta». (El de la canción era «no ocurrirá».)"
+        },
+        {
+          "id": "e20", "type": "listen_choose", "tags": ["origen:transfer", "hazu-ga-nai"], "source": "transfer",
+          "audio": { "text": "来るはずがない" },
+          "prompt": "¿Qué significa?",
+          "options": ["Es imposible que venga", "Probablemente no venga", "Se supone que viene", "Quizás venga"],
+          "answer": 0,
+          "explanation": "**はずがない** = negación categórica, no «probablemente no». Igual que 来るはずのない朝."
+        }
+      ]
+    },
+    {
+      "id": "particulas",
+      "title": "2. Partículas",
+      "intro": "Escucha con atención la partícula. Una vocal cambia quién hace qué.",
+      "questions": [
+        {
+          "id": "p01", "type": "listen_choose", "tags": ["origen:letra", "particulas", "wa-vs-wo"], "source": "COLORS L63",
+          "audio": { "text": "瞬間を感じる" },
+          "prompt": "¿Qué partícula oíste después de {瞬間|しゅんかん}?",
+          "options": ["を", "は", "が", "に"],
+          "answer": 0,
+          "explanation": "瞬間**を**感じる — を = objeto directo. En la intro era 瞬間**は**."
+        },
+        {
+          "id": "p02", "type": "listen_choose", "tags": ["origen:letra", "particulas", "ga-vs-ni"], "source": "嘘 L49",
+          "audio": { "text": "初夏の風に消えた" },
+          "prompt": "¿Qué partícula oíste después de {風|かぜ}?",
+          "options": ["に", "が", "を", "で"],
+          "answer": 0,
+          "explanation": "風**に**消えた — に = circunstancia. En la intro era 風**が**包む."
+        },
+        {
+          "id": "p03", "type": "listen_choose", "tags": ["origen:letra", "particulas", "wo-recorrido"], "source": "COLORS L68",
+          "audio": { "text": "心を吹き抜ける" },
+          "prompt": "¿Qué función tiene la を que oíste?",
+          "options": ["Recorrido: «a través de» el corazón", "Objeto directo", "Sujeto", "Tema"],
+          "answer": 0,
+          "explanation": "Con verbos de movimiento, を marca el **espacio recorrido**."
+        },
+        {
+          "id": "p04", "type": "minimal_pair", "tags": ["origen:letra", "particulas", "wa-vs-wo", "par-minimo"], "source": "COLORS L5 / L63",
+          "prompt": "¿Cuál de los dos dice «SIENTO el instante» (瞬間 como objeto)?",
+          "pair": { "a": { "text": "瞬間は" }, "b": { "text": "瞬間を" } },
+          "answer": "b",
+          "explanation": "**を** = objeto directo. **は** = tema."
+        },
+        {
+          "id": "p05", "type": "minimal_pair", "tags": ["origen:letra", "particulas", "transitivo-intransitivo", "par-minimo"], "source": "COLORS L28 / L50",
+          "prompt": "¿Cuál dice que la ventana se abre **sola**?",
+          "pair": { "a": { "text": "窓を開く" }, "b": { "text": "窓が開く" } },
+          "answer": "b",
+          "explanation": "窓**が**開く = intransitivo. 窓**を**開く = alguien la abre."
+        },
+        {
+          "id": "p06", "type": "listen_choose", "tags": ["origen:letra", "particulas", "to-cita"], "source": "嘘 L87",
+          "audio": { "text": "いつかまたねと手を振り合った" },
+          "prompt": "¿Qué función tiene la と que oíste después de またね?",
+          "options": ["Marca de cita: «diciendo “nos vemos”»", "«y» entre sustantivos", "Énfasis literario", "Condicional"],
+          "answer": 0,
+          "explanation": "「いつかまたね」**と** — と de **cita**."
+        },
+        {
+          "id": "p07", "type": "listen_choose", "tags": ["origen:transfer", "particulas", "wo-recorrido"], "source": "transfer",
+          "audio": { "text": "公園を歩く" },
+          "prompt": "¿Qué función tiene la を que oíste?",
+          "options": ["Recorrido: «caminar POR el parque»", "Objeto directo: «caminar el parque»", "Sujeto", "Destino"],
+          "answer": 0,
+          "explanation": "{公園|こうえん}**を**{歩|ある}く — を de trayecto con verbo de movimiento. Igual que 心を吹き抜ける."
+        },
+        {
+          "id": "p08", "type": "minimal_pair", "tags": ["origen:transfer", "particulas", "transitivo-intransitivo", "par-minimo"], "source": "transfer",
+          "prompt": "¿Cuál dice que la luz se apaga **sola** (nadie la apaga)?",
+          "pair": { "a": { "text": "電気を消す" }, "b": { "text": "電気が消える" } },
+          "answer": "b",
+          "explanation": "{電気|でんき}**が**{消|き}える = intransitivo. 電気**を**{消|け}す = alguien la apaga. Mismo par 消す/消える."
+        },
+        {
+          "id": "p09", "type": "listen_choose", "tags": ["origen:transfer", "particulas", "ga-nuevo"], "source": "transfer",
+          "audio": { "text": "手紙が来た" },
+          "prompt": "¿Qué partícula oíste después de {手紙|てがみ}?",
+          "options": ["が", "を", "は", "に"],
+          "answer": 0,
+          "explanation": "手紙**が**来た — が: algo que **aparece**, información nueva. Como 光が射した."
+        },
+        {
+          "id": "p10", "type": "minimal_pair", "tags": ["origen:transfer", "particulas", "mo", "par-minimo"], "source": "transfer",
+          "prompt": "¿Cuál dice «me gustan **tanto** los gatos **como** los perros»?",
+          "pair": { "a": { "text": "猫も犬も好き" }, "b": { "text": "猫と犬が好き" } },
+          "answer": "a",
+          "explanation": "**も…も** = tanto… como. と = «y» simple. Como 音も色も温度も."
+        },
+        {
+          "id": "p11", "type": "listen_choose", "tags": ["origen:transfer", "particulas", "to-cita"], "source": "transfer",
+          "audio": { "text": "行くと言った" },
+          "prompt": "¿Qué función tiene la と que oíste?",
+          "options": ["Marca de cita: «dijo que va»", "«y» entre sustantivos", "Énfasis literario", "Condicional"],
+          "answer": 0,
+          "explanation": "{行|い}く**と**{言|い}った — と de cita. Igual que またね**と**."
+        },
+        {
+          "id": "p12", "type": "minimal_pair", "tags": ["origen:transfer", "particulas", "au-ni", "par-minimo"], "source": "transfer",
+          "prompt": "¿Cuál es la forma **correcta** de «encontrarse con un amigo»?",
+          "pair": { "a": { "text": "友達に会う" }, "b": { "text": "友達を会う" } },
+          "answer": "a",
+          "explanation": "会う pide **に**, no を: {友達|ともだち}**に**会う. La b es incorrecta."
+        }
+      ]
+    },
+    {
+      "id": "registro",
+      "title": "3. Registro (formal / informal / literario)",
+      "intro": "El nivel de formalidad es información sobre la relación entre las personas. Identifica el registro.",
+      "questions": [
+        {
+          "id": "r01", "type": "listen_choose", "tags": ["origen:letra", "registro", "cortes"], "source": "嘘 L5",
+          "audio": { "text": "君は覚えていますか" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Cortés (です/ます)", "Informal (forma llana)", "Muy informal", "Literario"],
+          "answer": 0,
+          "explanation": "覚えて**います**か. Pero {君|きみ} es íntimo: la mezcla marca distancia."
+        },
+        {
+          "id": "r02", "type": "listen_choose", "tags": ["origen:letra", "registro", "literario", "nu"], "source": "COLORS L8",
+          "audio": { "text": "隠せぬ苛立ち" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Literario / poético", "Cortés (です/ます)", "Informal moderno", "Muy informal"],
+          "answer": 0,
+          "explanation": "{隠|かく}せ**ぬ** — negativo clásico. Recurso poético."
+        },
+        {
+          "id": "r03", "type": "listen_choose", "tags": ["origen:letra", "registro", "sa"], "source": "COLORS L16",
+          "audio": { "text": "決めればいいさ" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Muy informal (partícula final さ)", "Cortés", "Literario", "Neutro escrito"],
+          "answer": 0,
+          "explanation": "**さ** = partícula final muy casual, masculina."
+        },
+        {
+          "id": "r04", "type": "listen_choose", "tags": ["origen:letra", "registro", "deshita"], "source": "嘘 L93",
+          "audio": { "text": "最後の嘘は優しい嘘でした" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Cortés, en pasado (でした)", "Informal, en pasado (だった)", "Literario", "Muy informal"],
+          "answer": 0,
+          "explanation": "嘘**でした** = cópula cortés en pasado."
+        },
+        {
+          "id": "r05", "type": "listen_choose", "tags": ["origen:letra", "registro", "te-ne"], "source": "嘘 L73",
+          "audio": { "text": "上手に騙してね" },
+          "prompt": "¿Qué tipo de frase es?",
+          "options": ["Pedido suave y afectuoso (〜てね)", "Orden brusca (imperativo)", "Pedido formal (〜てください)", "Pregunta"],
+          "answer": 0,
+          "explanation": "{騙|だま}して**ね** — forma て como pedido + ね."
+        },
+        {
+          "id": "r06", "type": "listen_choose", "tags": ["origen:letra", "registro", "ka-vs-deshou"], "source": "嘘 L46",
+          "audio": { "text": "忘れたのでしょう" },
+          "prompt": "¿Es una pregunta real o una suposición?",
+          "options": ["Suposición resignada", "Pregunta real", "Orden", "Deseo"],
+          "answer": 0,
+          "explanation": "**のでしょう** = conjetura. No espera respuesta."
+        },
+        {
+          "id": "r07", "type": "listen_choose", "tags": ["origen:transfer", "registro", "cortes"], "source": "transfer",
+          "audio": { "text": "明日行きます" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Cortés (ます)", "Informal", "Muy informal", "Literario"],
+          "answer": 0,
+          "explanation": "{行|い}き**ます** = cortés. Informal sería 行く."
+        },
+        {
+          "id": "r08", "type": "listen_choose", "tags": ["origen:transfer", "registro", "informal"], "source": "transfer",
+          "audio": { "text": "明日行く" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Informal (forma llana)", "Cortés (ます)", "Literario", "Honorífico"],
+          "answer": 0,
+          "explanation": "{行|い}く = forma diccionario, llana. Entre amigos."
+        },
+        {
+          "id": "r09", "type": "listen_choose", "tags": ["origen:transfer", "registro", "literario", "nu"], "source": "transfer",
+          "audio": { "text": "変わらぬ愛" },
+          "prompt": "¿Qué registro tiene?",
+          "options": ["Literario / poético", "Cortés", "Informal moderno", "Muy informal"],
+          "answer": 0,
+          "explanation": "{変|か}わら**ぬ**{愛|あい} = 変わらない愛, «amor que no cambia». ぬ = literario."
+        },
+        {
+          "id": "r10", "type": "listen_choose", "tags": ["origen:transfer", "registro", "te-ne"], "source": "transfer",
+          "audio": { "text": "待ってね" },
+          "prompt": "¿Qué tipo de frase es?",
+          "options": ["Pedido suave («espérame, ¿sí?»)", "Orden brusca («¡espera!»)", "Pedido formal", "Pregunta"],
+          "answer": 0,
+          "explanation": "{待|ま}って**ね** — forma て + ね = pedido cariñoso."
+        },
+        {
+          "id": "r11", "type": "listen_choose", "tags": ["origen:transfer", "registro", "imperativo"], "source": "transfer",
+          "audio": { "text": "待て" },
+          "prompt": "¿Qué tipo de frase es?",
+          "options": ["Orden brusca (imperativo puro)", "Pedido suave", "Pedido formal", "Pregunta"],
+          "answer": 0,
+          "explanation": "{待|ま}**て** — imperativo con fila え. Tosco, autoritario. Como 止めろ o 騙せ."
+        },
+        {
+          "id": "r12", "type": "listen_choose", "tags": ["origen:transfer", "registro", "kudasai"], "source": "transfer",
+          "audio": { "text": "待ってください" },
+          "prompt": "¿Qué tipo de frase es?",
+          "options": ["Pedido formal («espere, por favor»)", "Orden brusca", "Pedido íntimo", "Pregunta"],
+          "answer": 0,
+          "explanation": "〜て**ください** = pedido cortés."
+        },
+        {
+          "id": "r13", "type": "listen_choose", "tags": ["origen:transfer", "registro", "deshou"], "source": "transfer",
+          "audio": { "text": "明日は雨でしょう" },
+          "prompt": "¿Es una pregunta real o una suposición?",
+          "options": ["Suposición: «mañana probablemente llueva»", "Pregunta: «¿mañana llueve?»", "Orden", "Deseo"],
+          "answer": 0,
+          "explanation": "雨**でしょう** — conjetura cortés. Sin だ antes de でしょう."
+        },
+        {
+          "id": "r14", "type": "listen_choose", "tags": ["origen:transfer", "registro", "n-da"], "source": "transfer",
+          "audio": { "text": "行くんだ" },
+          "prompt": "¿Qué matiz añade el final?",
+          "options": ["Explicación / decisión: «es que voy»", "Pregunta: «¿vas?»", "Orden: «ve»", "Rumor: «dicen que va»"],
+          "answer": 0,
+          "explanation": "行く**んだ** = のだ explicativo. Como わかってた**んだ**."
+        },
+        {
+          "id": "r15", "type": "listen_choose", "tags": ["origen:transfer", "registro", "pronombres"], "source": "transfer",
+          "audio": { "text": "私たち" },
+          "prompt": "¿Qué registro tiene este «nosotros»?",
+          "options": ["Neutro / formal", "Informal masculino (僕ら)", "Muy brusco (俺ら)", "Ultra formal"],
+          "answer": 0,
+          "explanation": "{私|わたし}**たち** — 私 neutro + たち (pluralizador neutro). 僕ら es informal masculino."
+        }
+      ]
+    },
+    {
+      "id": "gramatica",
+      "title": "4. Gramática en contexto",
+      "intro": "Ves la frase con un hueco y oyes la frase completa. Elige qué llenaba el hueco.",
+      "questions": [
+        {
+          "id": "g01", "type": "listen_fill", "tags": ["origen:letra", "gramatica", "nagara"], "source": "COLORS L14",
+          "audio": { "text": "迷いながら悩みながら" },
+          "display": "{迷|まよ}い___ {悩|なや}み___",
+          "prompt": "¿Qué va en los huecos?",
+          "options": ["ながら", "ければ", "そうに", "ことを"],
+          "answer": 0,
+          "explanation": "〜**ながら** = mientras."
+        },
+        {
+          "id": "g02", "type": "listen_fill", "tags": ["origen:letra", "gramatica", "te-shimau", "potencial"], "source": "COLORS L3",
+          "audio": { "text": "変えてしまえそうな瞬間" },
+          "display": "{変|か}えて___そうな{瞬間|しゅんかん}",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["しまえ", "しまい", "しまう", "しまった"],
+          "answer": 0,
+          "explanation": "しま**え** = potencial (fila え) → «parece que **podría** cambiarlo del todo»."
+        },
+        {
+          "id": "g03", "type": "listen_fill", "tags": ["origen:letra", "gramatica", "hazu"], "source": "嘘 L35",
+          "audio": { "text": "来るはずのない朝" },
+          "display": "{来|く}る___のない{朝|あさ}",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["はず", "こと", "ふり", "ほど"],
+          "answer": 0,
+          "explanation": "来る**はず**のない = es imposible que llegue."
+        },
+        {
+          "id": "g04", "type": "listen_fill", "tags": ["origen:letra", "gramatica", "te-wa"], "source": "嘘 L63",
+          "audio": { "text": "今日も散らかしては" },
+          "display": "{今日|きょう}も{散|ち}らかし___",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["ては", "ても", "たら", "ながら"],
+          "answer": 0,
+          "explanation": "〜**ては** = ciclo repetido."
+        },
+        {
+          "id": "g05", "type": "listen_fill", "tags": ["origen:letra", "gramatica", "potencial", "nakatta"], "source": "嘘 L106",
+          "audio": { "text": "果たせなかった約束" },
+          "display": "___なかった{約束|やくそく}",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["果たせ", "果たさ", "果たし", "果たす"],
+          "answer": 0,
+          "explanation": "果た**せ**なかった = potencial + negativo + pasado."
+        },
+        {
+          "id": "g06", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "nagara"], "source": "transfer",
+          "audio": { "text": "歩きながら話す" },
+          "display": "{歩|ある}き___{話|はな}す",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["ながら", "ては", "そうに", "ことを"],
+          "answer": 0,
+          "explanation": "歩き**ながら**話す = hablar mientras camina."
+        },
+        {
+          "id": "g07", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "te-shimau"], "source": "transfer",
+          "audio": { "text": "食べてしまった" },
+          "display": "{食|た}べて___",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["しまった", "しまえ", "おいた", "みた"],
+          "answer": 0,
+          "explanation": "食べて**しまった** = me lo comí por completo. Pasado de しまう."
+        },
+        {
+          "id": "g08", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "sou-ni-naru"], "source": "transfer",
+          "audio": { "text": "転びそうになった" },
+          "display": "{転|ころ}び___",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["そうになった", "そうな", "たかった", "ながら"],
+          "answer": 0,
+          "explanation": "転び**そうになった** = casi me caigo. Raíz ます + そうになる."
+        },
+        {
+          "id": "g09", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "te-wa"], "source": "transfer",
+          "audio": { "text": "書いては消す" },
+          "display": "{書|か}い___{消|け}す",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["ては", "ても", "たら", "ながら"],
+          "answer": 0,
+          "explanation": "書い**ては**消す = escribe y borra, una y otra vez."
+        },
+        {
+          "id": "g10", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "koto"], "source": "transfer",
+          "audio": { "text": "日本へ行くことを決めた" },
+          "display": "{日本|にほん}へ{行|い}く___を{決|き}めた",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["こと", "はず", "ふり", "ほど"],
+          "answer": 0,
+          "explanation": "行く**こと**を決めた = decidí ir. こと nominaliza."
+        },
+        {
+          "id": "g11", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "hazu"], "source": "transfer",
+          "audio": { "text": "来るはずだ" },
+          "display": "{来|く}る___だ",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["はず", "こと", "そう", "ほど"],
+          "answer": 0,
+          "explanation": "来る**はず**だ = se supone que viene."
+        },
+        {
+          "id": "g12", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "potencial-ichidan"], "source": "transfer",
+          "audio": { "text": "食べられない" },
+          "display": "{食|た}べ___ない",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["られ", "さ", "て", "ませ"],
+          "answer": 0,
+          "explanation": "食べ**られ**ない = no puedo comer. Potencial de ichidan = raíz + られる."
+        },
+        {
+          "id": "g13", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "adj-na-ni"], "source": "transfer",
+          "audio": { "text": "静かになった" },
+          "display": "{静|しず}か___なった",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["に", "く", "で", "と"],
+          "answer": 0,
+          "explanation": "静か**に**なった — adjetivo な + に + なる. Como 半分になった."
+        },
+        {
+          "id": "g14", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "adj-i-ku"], "source": "transfer",
+          "audio": { "text": "高くなった" },
+          "display": "{高|たか}___なった",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["く", "に", "で", "い"],
+          "answer": 0,
+          "explanation": "高**く**なった — adjetivo い → く + なる. Como 青**く**澄み切ってゆく."
+        },
+        {
+          "id": "g15", "type": "listen_fill", "tags": ["origen:transfer", "gramatica", "te-form", "te-iru"], "source": "transfer",
+          "audio": { "text": "東京に住んでいます" },
+          "display": "{東京|とうきょう}に{住|す}ん___います",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["で", "て", "だ", "に"],
+          "answer": 0,
+          "explanation": "住ん**で**います — forma て de godan en む: 〜んで. 住んでいる = vivo (estado, obliga a ている)."
+        }
+      ]
+    },
+    {
+      "id": "dictado",
+      "title": "5. Dictado en kana",
+      "intro": "Escribe lo que oyes en hiragana o rōmaji. Nunca en kanji. Atención al rendaku, a la っ y a las vocales largas.",
+      "questions": [
+        {
+          "id": "d01", "type": "listen_dictation", "tags": ["origen:letra", "dictado", "rendaku"], "source": "COLORS L26",
+          "audio": { "text": "大空" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "おおぞら", "accept": ["oozora", "ōzora", "ohzora"] },
+          "explanation": "{大空|おおぞら} — rendaku: そら → **ぞ**ら."
+        },
+        {
+          "id": "d02", "type": "listen_dictation", "tags": ["origen:letra", "dictado", "rendaku"], "source": "嘘 L15",
+          "audio": { "text": "笑顔" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "えがお", "accept": ["egao"] },
+          "explanation": "{笑顔|えがお} — rendaku: かお → **が**お."
+        },
+        {
+          "id": "d03", "type": "listen_dictation", "tags": ["origen:letra", "dictado", "on-yomi", "vocal-larga"], "source": "嘘 L35",
+          "audio": { "text": "空白" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "くうはく", "accept": ["kuuhaku", "kūhaku"] },
+          "explanation": "{空白|くうはく} — 空 se lee **くう** aquí."
+        },
+        {
+          "id": "d04", "type": "listen_dictation", "tags": ["origen:letra", "dictado", "potencial"], "source": "嘘 L52",
+          "audio": { "text": "戻れない" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "もどれない", "accept": ["modorenai"] },
+          "explanation": "{戻|もど}**れ**ない — si escribiste もど**ら**ない, oíste la vocal equivocada."
+        },
+        {
+          "id": "d05", "type": "listen_dictation", "tags": ["origen:letra", "dictado", "sokuon"], "source": "COLORS L23",
+          "audio": { "text": "からっぽ" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "からっぽ", "accept": ["karappo"] },
+          "explanation": "から**っ**ぽ — la っ duplica la consonante."
+        },
+        {
+          "id": "d06", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "rendaku"], "source": "transfer",
+          "audio": { "text": "手紙" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "てがみ", "accept": ["tegami"] },
+          "explanation": "{手紙|てがみ} — rendaku: かみ → **が**み. Carta."
+        },
+        {
+          "id": "d07", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "rendaku"], "source": "transfer",
+          "audio": { "text": "花火" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "はなび", "accept": ["hanabi"] },
+          "explanation": "{花火|はなび} — rendaku: ひ → **び**. Fuegos artificiales."
+        },
+        {
+          "id": "d08", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "sokuon", "vocal-larga"], "source": "transfer",
+          "audio": { "text": "学校" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "がっこう", "accept": ["gakkou", "gakkō"] },
+          "explanation": "{学校|がっこう} — っ + vocal larga. Escuela (N5)."
+        },
+        {
+          "id": "d09", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "vocal-larga"], "source": "transfer",
+          "audio": { "text": "東京" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "とうきょう", "accept": ["toukyou", "tōkyō", "tokyo", "toukyo"] },
+          "explanation": "{東京|とうきょう} — dos vocales largas seguidas."
+        },
+        {
+          "id": "d10", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "sokuon"], "source": "transfer",
+          "audio": { "text": "切って" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "きって", "accept": ["kitte"] },
+          "explanation": "{切|き}って — forma て de 切る (godan): っ + て."
+        },
+        {
+          "id": "d11", "type": "listen_dictation", "tags": ["origen:transfer", "dictado", "lectura-fija"], "source": "transfer",
+          "audio": { "text": "一人" },
+          "prompt": "Escribe lo que oíste.",
+          "answer": { "kana": "ひとり", "accept": ["hitori"] },
+          "explanation": "{一人|ひとり} — lectura irregular, como 二人 (ふたり)."
+        }
+      ]
+    },
+    {
+      "id": "pares",
+      "title": "6. Pares mínimos",
+      "intro": "Dos frases casi iguales. Una vocal o una sílaba cambia el significado.",
+      "questions": [
+        {
+          "id": "m01", "type": "minimal_pair", "tags": ["origen:letra", "par-minimo", "potencial"], "source": "嘘 L52",
+          "prompt": "¿Cuál significa «no **PODEMOS** volver»?",
+          "pair": { "a": { "text": "戻らない" }, "b": { "text": "戻れない" } },
+          "answer": "b",
+          "explanation": "{戻|もど}**れ**ない = potencial (fila え). {戻|もど}**ら**ない = negativo simple."
+        },
+        {
+          "id": "m02", "type": "minimal_pair", "tags": ["origen:letra", "par-minimo", "te-iru", "memoria"], "source": "嘘 §2",
+          "prompt": "¿Cuál significa «lo **recuerdo**» (lo tengo en la memoria)?",
+          "pair": { "a": { "text": "覚えた" }, "b": { "text": "覚えている" } },
+          "answer": "b",
+          "explanation": "覚え**ている** = estado. 覚え**た** = lo memoricé (acto)."
+        },
+        {
+          "id": "m03", "type": "minimal_pair", "tags": ["origen:letra", "par-minimo", "ka-vs-deshou"], "source": "嘘 L5 / L46",
+          "prompt": "¿Cuál es una **pregunta real** que espera respuesta?",
+          "pair": { "a": { "text": "覚えていますか" }, "b": { "text": "忘れたのでしょう" } },
+          "answer": "a",
+          "explanation": "**か** pregunta. **でしょう** supone."
+        },
+        {
+          "id": "m04", "type": "minimal_pair", "tags": ["origen:letra", "par-minimo", "de-vs-dakedo"], "source": "嘘 L76",
+          "prompt": "¿Cuál dice «las odio **y** me gustan» como **un solo** sentimiento (sin «pero»)?",
+          "pair": { "a": { "text": "嘘は嫌いで好き" }, "b": { "text": "嘘は嫌いだけど好き" } },
+          "answer": "a",
+          "explanation": "嫌い**で**好き — で conecta sin contraste. だけど = «pero»."
+        },
+        {
+          "id": "m05", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "potencial"], "source": "transfer",
+          "prompt": "¿Cuál significa «no **PUEDO** leer»?",
+          "pair": { "a": { "text": "読まない" }, "b": { "text": "読めない" } },
+          "answer": "b",
+          "explanation": "{読|よ}**め**ない = potencial negativo. 読**ま**ない = no leo (decisión)."
+        },
+        {
+          "id": "m06", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "potencial", "nakatta"], "source": "transfer",
+          "prompt": "¿Cuál significa «no **PUDE** ir»?",
+          "pair": { "a": { "text": "行かなかった" }, "b": { "text": "行けなかった" } },
+          "answer": "b",
+          "explanation": "行**け**なかった = potencial + pasado. 行**か**なかった = no fui. Igual que 果たせなかった."
+        },
+        {
+          "id": "m07", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "te-iru"], "source": "transfer",
+          "prompt": "¿Cuál significa «estoy comiendo» (ahora mismo)?",
+          "pair": { "a": { "text": "食べた" }, "b": { "text": "食べている" } },
+          "answer": "b",
+          "explanation": "食べ**ている** = acción en curso (aquí no es estado, es progreso). 食べ**た** = comí."
+        },
+        {
+          "id": "m08", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "kuru"], "source": "transfer",
+          "prompt": "¿Cuál significa «**no** viene»?",
+          "pair": { "a": { "text": "来る" }, "b": { "text": "来ない" } },
+          "answer": "b",
+          "explanation": "**く**る (viene) / **こ**ない (no viene) — 来る es irregular: cambia la vocal de la raíz."
+        },
+        {
+          "id": "m09", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "sou", "potencial"], "source": "transfer",
+          "prompt": "¿Cuál significa «parece que **podrá** ir»?",
+          "pair": { "a": { "text": "行きそう" }, "b": { "text": "行けそう" } },
+          "answer": "b",
+          "explanation": "行**け**そう = potencial + そう. 行**き**そう = parece que va a ir. Una vocal."
+        },
+        {
+          "id": "m10", "type": "minimal_pair", "tags": ["origen:transfer", "par-minimo", "sou", "apariencia-vs-rumor"], "source": "transfer",
+          "prompt": "¿Cuál significa «parece que va a llover» (lo veo en el cielo)?",
+          "pair": { "a": { "text": "雨が降りそうだ" }, "b": { "text": "雨が降るそうだ" } },
+          "answer": "a",
+          "explanation": "降**り**そう (raíz ます) = apariencia. 降**る**そう (forma llana) = rumor."
+        }
+      ]
+    },
+    {
+      "id": "habla",
+      "title": "7. Producción oral",
+      "intro": "Di la frase en voz alta. El navegador intentará reconocerla; después verás la respuesta correcta y podrás calificarte tú mismo.",
+      "questions": [
+        {
+          "id": "h01", "type": "speak", "tags": ["origen:letra", "produccion", "formal"], "source": "COLORS L28",
+          "prompt": "Oirás una frase **informal**. Dila en forma **cortés**.",
+          "audio": { "text": "窓を開くことを決めた", "hidden": false, "display": "{窓|まど}を{開|ひら}くことを{決|き}めた" },
+          "expected": { "kana": "まどをひらくことをきめました", "accept": ["窓を開くことを決めました", "窓を開く事を決めました"], "display": "{窓|まど}を{開|ひら}くことを{決|き}め**ました**" },
+          "model_audio": { "text": "窓を開くことを決めました" },
+          "explanation": "Solo cambia el verbo final: 決めた → 決め**ました**."
+        },
+        {
+          "id": "h02", "type": "speak", "tags": ["origen:letra", "produccion", "contraccion"], "source": "嘘 L5",
+          "prompt": "Oirás una frase **cortés**. Dila en forma **informal contraída**.",
+          "audio": { "text": "覚えていますか", "hidden": false, "display": "{覚|おぼ}えていますか" },
+          "expected": { "kana": "おぼえてる", "accept": ["覚えてる", "おぼえてる？", "覚えてる？", "おぼえている", "覚えている"], "display": "{覚|おぼ}えてる？" },
+          "model_audio": { "text": "覚えてる？" },
+          "explanation": "覚えています → 覚えて**る** (se come la い). Pregunta solo con entonación."
+        },
+        {
+          "id": "h03", "type": "speak", "tags": ["origen:letra", "produccion", "formal", "n-desu"], "source": "嘘 L38",
+          "prompt": "Oirás una frase muy coloquial. Dila en forma **cortés**.",
+          "audio": { "text": "全部わかってたんだ", "hidden": false, "display": "{全部|ぜんぶ}わかってたんだ" },
+          "expected": { "kana": "ぜんぶわかっていたんです", "accept": ["全部分かっていたんです", "全部わかっていたんです", "ぜんぶわかっていたのです", "全部分かっていたのです", "全部わかっていたのです"], "display": "{全部|ぜんぶ}わかって**いた**ん**です**" },
+          "model_audio": { "text": "全部わかっていたんです" },
+          "explanation": "Deshacer las dos contracciones: てた → て**いた**; んだ → ん**です**."
+        },
+        {
+          "id": "h04", "type": "speak", "tags": ["origen:letra", "produccion", "shadowing"], "source": "COLORS L65",
+          "prompt": "**Repite** exactamente lo que oyes.",
+          "audio": { "text": "光へと両手を伸ばして" },
+          "expected": { "kana": "ひかりへとりょうてをのばして", "accept": ["光へと両手を伸ばして", "光へ両手を伸ばして", "ひかりへりょうてをのばして"], "display": "{光|ひかり}へと{両手|りょうて}を{伸|の}ばして" },
+          "model_audio": { "text": "光へと両手を伸ばして" },
+          "explanation": "Shadowing. へと se pronuncia *e to*."
+        },
+        {
+          "id": "h05", "type": "speak", "tags": ["origen:transfer", "produccion", "formal"], "source": "transfer",
+          "prompt": "Oirás una frase **informal**. Dila en forma **cortés**.",
+          "audio": { "text": "明日行く", "hidden": false, "display": "{明日|あした}{行|い}く" },
+          "expected": { "kana": "あしたいきます", "accept": ["明日行きます", "あすいきます"], "display": "{明日|あした}{行|い}き**ます**" },
+          "model_audio": { "text": "明日行きます" },
+          "explanation": "行く → 行き**ます** (raíz ます de godan en く + ます)."
+        },
+        {
+          "id": "h06", "type": "speak", "tags": ["origen:transfer", "produccion", "contraccion"], "source": "transfer",
+          "prompt": "Oirás una frase **cortés**. Dila en forma **informal contraída** (como entre amigos).",
+          "audio": { "text": "食べています", "hidden": false, "display": "{食|た}べています" },
+          "expected": { "kana": "たべてる", "accept": ["食べてる", "たべている", "食べている"], "display": "{食|た}べてる" },
+          "model_audio": { "text": "食べてる" },
+          "explanation": "食べています → 食べている → 食べて**る**."
+        },
+        {
+          "id": "h07", "type": "speak", "tags": ["origen:transfer", "produccion", "nagara"], "source": "transfer",
+          "prompt": "Di en japonés informal: **«hablo mientras camino»**.",
+          "expected": { "kana": "あるきながらはなす", "accept": ["歩きながら話す", "あるきながらはなします", "歩きながら話します"], "display": "{歩|ある}きながら{話|はな}す" },
+          "model_audio": { "text": "歩きながら話す" },
+          "explanation": "歩き**ながら**話す — raíz ます + ながら. La acción principal va al final."
+        },
+        {
+          "id": "h08", "type": "speak", "tags": ["origen:transfer", "produccion", "suki-ga"], "source": "transfer",
+          "prompt": "Di en japonés: **«me gustan los gatos»**.",
+          "expected": { "kana": "ねこがすき", "accept": ["猫が好き", "ねこがすきです", "猫が好きです"], "display": "{猫|ねこ}が{好|す}き" },
+          "model_audio": { "text": "猫が好き" },
+          "explanation": "好き pide **が**, no を."
+        },
+        {
+          "id": "h09", "type": "speak", "tags": ["origen:transfer", "produccion", "sou-ni-naru"], "source": "transfer",
+          "prompt": "Di en japonés: **«casi me caigo»** (estuve a punto).",
+          "expected": { "kana": "ころびそうになった", "accept": ["転びそうになった", "ころびそうになりました", "転びそうになりました"], "display": "{転|ころ}びそうになった" },
+          "model_audio": { "text": "転びそうになった" },
+          "explanation": "転び**そうになった** — raíz ます + そうになる, en pasado."
+        },
+        {
+          "id": "h10", "type": "speak", "tags": ["origen:transfer", "produccion", "potencial", "formal"], "source": "transfer",
+          "prompt": "Di en japonés **cortés**: **«no puedo ir»**.",
+          "expected": { "kana": "いけません", "accept": ["行けません", "いけない", "行けない"], "display": "{行|い}け**ません**" },
+          "model_audio": { "text": "行けません" },
+          "explanation": "行く → 行**け**る (potencial, fila え) → 行け**ません** (negativo cortés)."
+        }
+      ]
+    },
+    {
+      "id": "lectura",
+      "title": "8. Reconocimiento al leer",
+      "intro": "Sin audio. Lee la frase (los kanji llevan furigana) y responde.",
+      "questions": [
+        {
+          "id": "l01", "type": "read_choose", "tags": ["origen:letra", "lectura", "kakekotoba"], "source": "嘘 L49",
+          "display": "{約束|やくそく} {千切|ちぎ}り {初夏|しょか}の{風|かぜ}に{消|き}えた",
+          "prompt": "En esta línea, {千切|ちぎ}り es…",
+          "options": ["un verbo (raíz ます de 千切る)", "un sustantivo («juramento»)", "un adjetivo", "una partícula"],
+          "answer": 0,
+          "explanation": "Raíz ます de 千切る como conector. Su homófono {契|ちぎ}り sí es sustantivo."
+        },
+        {
+          "id": "l02", "type": "read_choose", "tags": ["origen:letra", "lectura", "kureru"], "source": "COLORS L18",
+          "display": "{君|きみ}がくれた{言葉|ことば}",
+          "prompt": "¿Qué indica くれた?",
+          "options": ["Alguien me dio algo a **mí** (otro → yo)", "Yo le di algo a otro", "Yo recibí (mi punto de vista)", "Alguien dio algo a un tercero"],
+          "answer": 0,
+          "explanation": "**くれる** = dar hacia mí. あげる = yo → otro."
+        },
+        {
+          "id": "l03", "type": "read_choose", "tags": ["origen:letra", "lectura", "lecturas-kanji"], "source": "COLORS / 嘘",
+          "display": "{空|そら} · {空|から}っぽ · {空|くう}{白|はく}",
+          "prompt": "¿Cuál lectura de 空 significa «cielo»?",
+          "options": ["そら", "から", "くう", "あき"],
+          "answer": 0,
+          "explanation": "**そら** = cielo. から = vacío. くう = vacío en compuestos."
+        },
+        {
+          "id": "l04", "type": "read_choose", "tags": ["origen:transfer", "lectura", "relativa"], "source": "transfer",
+          "display": "{父|ちち}が{建|た}てた{家|いえ}",
+          "prompt": "¿Cómo se traduce?",
+          "options": ["la casa **que** construyó mi padre", "mi padre construyó una casa", "la casa de mi padre", "mi padre en la casa"],
+          "answer": 0,
+          "explanation": "Relativa: verbo + sustantivo pegado. La descripción va antes, sin «que»."
+        },
+        {
+          "id": "l05", "type": "read_choose", "tags": ["origen:transfer", "lectura", "ga-no"], "source": "transfer",
+          "display": "{雨|あめ}の{降|ふ}る{日|ひ}",
+          "prompt": "¿Qué es la の aquí?",
+          "options": ["Sujeto (= 雨**が**降る日): «un día en que llueve»", "Posesivo: «el día de la lluvia»", "Nominalizador", "Partícula final"],
+          "answer": 0,
+          "explanation": "Alternancia が/の dentro de relativa. Tras la の viene un **verbo** → es sujeto, no posesivo."
+        },
+        {
+          "id": "l06", "type": "read_choose", "tags": ["origen:transfer", "lectura", "kiru-aux"], "source": "transfer",
+          "display": "{食|た}べ{切|き}る",
+          "prompt": "¿Qué significa?",
+          "options": ["comérselo **todo**, hasta el final", "empezar a comer", "seguir comiendo", "dejar de comer"],
+          "answer": 0,
+          "explanation": "〜**切る** = completar hasta el final. Como 澄み切る."
+        },
+        {
+          "id": "l07", "type": "read_choose", "tags": ["origen:transfer", "lectura", "te-iru-estado"], "source": "transfer",
+          "display": "{結婚|けっこん}している",
+          "prompt": "¿Qué significa?",
+          "options": ["está casado/a (estado)", "se está casando (ahora mismo)", "se va a casar", "se casó ayer"],
+          "answer": 0,
+          "explanation": "〜ている de **estado resultante**, no progreso. Como 覚えている, 住んでいる, 知っている."
+        }
+      ]
+    }
+  ]
+}

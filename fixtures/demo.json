@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": "demo",
+    "title": "Demo",
+    "description": "Una pregunta de cada tipo, para probar la app.",
+    "lang": "ja-JP",
+    "voice_preference": ["Google 日本語", "Microsoft Nanami", "Kyoko"],
+    "default_rate": 0.85,
+    "slow_rate": 0.6,
+    "shuffle_sections": false,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "show_explanation": "after_each",
+    "passing_pct": 70,
+    "speak_attempts": 3,
+    "dictation_tolerance": 0
+  },
+  "sections": [
+    {
+      "id": "demo",
+      "title": "Demo de todos los tipos",
+      "intro": "Una pregunta de cada tipo.",
+      "questions": [
+        {
+          "id": "d1", "type": "listen_choose", "tags": ["vocabulario"], "source": "COLORS",
+          "audio": { "text": "いつも" },
+          "prompt": "¿Qué significa?",
+          "options": ["siempre", "ahora", "aquí", "ya"],
+          "answer": 0,
+          "explanation": "いつも = siempre (N5)."
+        },
+        {
+          "id": "d2", "type": "listen_dictation", "tags": ["rendaku"], "source": "嘘",
+          "audio": { "text": "笑顔" },
+          "prompt": "Escribe lo que oíste (hiragana o rōmaji).",
+          "answer": { "kana": "えがお", "accept": ["egao"] },
+          "explanation": "{笑顔|えがお} — rendaku: かお → **が**お."
+        },
+        {
+          "id": "d3", "type": "listen_fill", "tags": ["gramatica"], "source": "COLORS",
+          "audio": { "text": "決めればいいさ" },
+          "display": "{決|き}め___いいさ",
+          "prompt": "¿Qué va en el hueco?",
+          "options": ["れば", "たら", "ても", "ながら"],
+          "answer": 0,
+          "explanation": "〜ばいい = basta con…"
+        },
+        {
+          "id": "d4", "type": "minimal_pair", "tags": ["particulas"], "source": "COLORS",
+          "prompt": "¿Cuál significa «SIENTO el instante» (瞬間 como objeto)?",
+          "pair": { "a": { "text": "瞬間は" }, "b": { "text": "瞬間を" } },
+          "answer": "b",
+          "explanation": "を = objeto directo. は = tema."
+        },
+        {
+          "id": "d5", "type": "speak", "tags": ["registro"], "source": "嘘",
+          "prompt": "Di en japonés **informal**: «¿te acuerdas?»",
+          "expected": { "kana": "おぼえてる", "accept": ["おぼえている", "覚えてる", "覚えている"], "display": "{覚|おぼ}えてる？" },
+          "model_audio": { "text": "覚えてる？" },
+          "explanation": "Informal: 覚えてる (contracción de 覚えている). Formal: 覚えていますか."
+        },
+        {
+          "id": "d6", "type": "read_choose", "tags": ["lectura"], "source": "嘘",
+          "display": "{君|きみ}は{憶|おぼ}えていますか",
+          "prompt": "¿Qué registro tiene esta frase?",
+          "options": ["Formal (ます)", "Informal", "Literario"],
+          "answer": 0,
+          "explanation": "〜ていますか = cortés."
+        }
+      ]
+    }
+  ]
+}
