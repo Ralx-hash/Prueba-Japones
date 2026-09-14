@@ -493,6 +493,7 @@ Si hay errores, no iniciar la prueba; listar los errores.
 }
 ```
 
+
 ---
 
 ## 11. Criterios de aceptación
